@@ -1,0 +1,11 @@
+{
+    "author": "h4l609",
+    "dependencies": { },
+    "description": "Tools For Texture",
+    "name": "com.h4l609.texture-tools",
+    "repository": "github:H4L609/TextureTools",
+    "version": "0.0.0",
+    "displayName": "TextureTools",
+    "unity": "2022.3",
+    "unityRelease": "9f1"
+}

@@ -1,0 +1,46 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:ScrollView horizontal-scroller-visibility="Hidden" style="margin-top: 10px; margin-bottom: 10px; margin-right: 3px; margin-left: 3px;">
+        <ui:Label tabindex="-1" text="Note" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-style: bold; font-size: 13px;" />
+        <ui:Label tabindex="-1" text="&lt;MaskMap&gt;&#10;&#10; R : Metalic&#10; G : Occlucion&#10; B : Detail Map&#10; A : Smoothness" parse-escape-sequences="true" display-tooltip-when-elided="true" style="margin-top: 1px; margin-right: 3px; margin-bottom: 1px; margin-left: 3px;" />
+        <ui:VisualElement name="RedChannel" style="flex-grow: 1; transform-origin: bottom; height: auto; flex-direction: column; flex-wrap: nowrap; opacity: 1; margin-bottom: 10px; margin-top: 10px; margin-right: 3px; margin-left: 3px;">
+            <ui:Label tabindex="-1" text="Red Channel" parse-escape-sequences="true" display-tooltip-when-elided="true" style="overflow: visible; -unity-font-style: bold; font-size: 13px;" />
+            <ui:Slider picking-mode="Ignore" label="Value" value="42" high-value="1" show-input-field="true" direction="Horizontal" name="valueRed" inverted="false" tooltip="This value is used when &quot;Use Texture&quot; is False." style="width: auto; flex-wrap: nowrap; justify-content: center; align-items: center; align-self: stretch; flex-direction: row; display: flex; overflow: visible;" />
+            <ui:Toggle label="Use Texture" name="useTextureRed" value="true" />
+            <ui:Toggle label="Flip Texture Color" name="flipTextureRed" tooltip="Use this toggle to flip(1-color ) texture color." />
+            <uie:ObjectField label="Texture" name="redTex" type="UnityEngine.Texture2D, UnityEngine.CoreModule" allow-scene-objects="false" focusable="true" tooltip="Channel Value is 1.0f when &quot;Texture&quot; is None &amp; &quot;Use Texture&quot; is Checked" style="display: flex; visibility: visible; flex-direction: row;" />
+            <ui:EnumField label="Select Channel" type="TextureMixer.Editor.Enum.Channels, TextureMixer" name="channelForRed" style="flex-wrap: nowrap; justify-content: flex-start; align-self: auto; align-items: center;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="GreenChannel" style="flex-grow: 1; transform-origin: bottom; height: auto; flex-direction: column; flex-wrap: nowrap; opacity: 0.94; margin-top: 10px; margin-right: 3px; margin-bottom: 10px; margin-left: 3px;">
+            <ui:Label tabindex="-1" text="Green Channel" parse-escape-sequences="true" display-tooltip-when-elided="true" style="overflow: visible; -unity-font-style: bold; font-size: 13px; margin-bottom: 20px;" />
+            <ui:Slider picking-mode="Ignore" label="Value" value="42" high-value="1" show-input-field="true" direction="Horizontal" name="valueGreen" tooltip="This value is used when &quot;Use Texture&quot; is False." style="width: auto; flex-wrap: nowrap; justify-content: center; align-items: center; align-self: stretch; flex-direction: row;" />
+            <ui:Toggle label="Use Texture" name="useTextureGreen" value="true" />
+            <ui:Toggle label="Flip Texture Color" name="flipTextureGreen" tooltip="Use this toggle to flip(1-color ) texture color." />
+            <uie:ObjectField label="Texture" name="greenTex" type="UnityEngine.Texture2D, UnityEngine.CoreModule" allow-scene-objects="false" tooltip="Channel Value is 1.0f when &quot;Texture&quot; is None &amp; &quot;Use Texture&quot; is Checked" />
+            <ui:EnumField label="Select Channel" type="TextureMixer.Editor.Enum.Channels, TextureMixer" name="channelForGreen" value="G" />
+        </ui:VisualElement>
+        <ui:VisualElement name="BlueChannel" style="flex-grow: 1; transform-origin: bottom; height: auto; flex-direction: column; flex-wrap: nowrap; opacity: 0.94; margin-top: 10px; margin-right: 3px; margin-bottom: 10px; margin-left: 3px;">
+            <ui:Label tabindex="-1" text="Blue Channel" parse-escape-sequences="true" display-tooltip-when-elided="true" style="overflow: visible; -unity-font-style: bold; font-size: 13px; align-items: auto; margin-bottom: 1px; margin-right: 3px; margin-top: 1px; margin-left: 1px;" />
+            <ui:Slider picking-mode="Ignore" label="Value" value="42" high-value="1" show-input-field="true" direction="Horizontal" name="valueBlue" tooltip="This value is used when &quot;Use Texture&quot; is False." style="width: auto; flex-wrap: nowrap; justify-content: center; align-items: center; align-self: stretch; flex-direction: row;" />
+            <ui:Toggle label="Use Texture" name="useTextureBlue" value="true" />
+            <ui:Toggle label="Flip Texture Color" name="flipTextureBlue" tooltip="Use this toggle to flip(1-color ) texture color." />
+            <uie:ObjectField label="Texture" name="blueTex" type="UnityEngine.Texture2D, UnityEngine.CoreModule" allow-scene-objects="false" tooltip="Channel Value is 1.0f when &quot;Texture&quot; is None &amp; &quot;Use Texture&quot; is Checked" />
+            <ui:EnumField label="Select Channel" type="TextureMixer.Editor.Enum.Channels, TextureMixer" name="channelForBlue" value="B" />
+        </ui:VisualElement>
+        <ui:VisualElement name="AlphaChannel" style="flex-grow: 1; transform-origin: bottom; height: auto; flex-direction: column; flex-wrap: nowrap; opacity: 0.94; margin-top: 1px; margin-right: 3px; margin-bottom: 1px; margin-left: 3px;">
+            <ui:Label tabindex="-1" text="Alpha Channel" parse-escape-sequences="true" display-tooltip-when-elided="true" style="overflow: visible; -unity-font-style: bold; font-size: 13px;" />
+            <ui:Slider picking-mode="Ignore" label="Value" value="42" high-value="1" show-input-field="true" direction="Horizontal" name="valueAlpha" tooltip="This value is used when &quot;Use Texture&quot; is False." style="width: auto; flex-wrap: nowrap; justify-content: center; align-items: center; align-self: stretch; flex-direction: row;" />
+            <ui:Toggle label="Use Texture" name="useTextureAlpha" value="true" />
+            <ui:Toggle label="Flip Texture Color" name="flipTextureAlpha" tooltip="Use this toggle to flip(1-color ) texture color." />
+            <uie:ObjectField label="Texture" name="alphaTex" type="UnityEngine.Texture2D, UnityEngine.CoreModule" allow-scene-objects="false" tooltip="Channel Value is 1.0f when &quot;Texture&quot; is None &amp; &quot;Use Texture&quot; is Checked" />
+            <ui:EnumField label="Select Channel" type="TextureMixer.Editor.Enum.Channels, TextureMixer" name="channelForAlpha" value="A" />
+        </ui:VisualElement>
+        <ui:VisualElement name="outputResolution" style="flex-grow: 1;">
+            <ui:Label tabindex="-1" text="Bake Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" enable-rich-text="true" style="-unity-font-style: bold; font-size: 13px;" />
+            <ui:EnumField label="Output Resolution" type="TextureMixer.Editor.Enum.Texture2DResolution, TextureMixer" name="outputResolution" value="x256" />
+            <ui:TextField picking-mode="Ignore" label="Output Filepath" keyboard-type="Search" multiline="false" name="saveFilePath" tooltip="Absolute Path" is-delayed="true" auto-correction="false">
+                <ui:Button text="Browse" parse-escape-sequences="true" display-tooltip-when-elided="true" name="fileBrowseButton" />
+            </ui:TextField>
+        </ui:VisualElement>
+        <ui:Button text="Bake" parse-escape-sequences="true" display-tooltip-when-elided="true" name="bakeButton" style="width: 90%; align-self: center; margin-top: 20px; align-items: flex-start;" />
+    </ui:ScrollView>
+</ui:UXML>
